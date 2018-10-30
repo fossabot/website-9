@@ -3,13 +3,43 @@ $grey-color-light: lighten($grey-color, 40%) !default;
 $grey-color-dark: darken($grey-color, 25%) !default;
 $text-color: #111 !default;
 $background-color: #fdfdfd !default;
-$xcode-pink: #AD0059 !default;
+$xcode-pink: #ad0059 !default;
 $xcode-green: #006600 !default;
-$xcode-blue-marina: #0C5D65;
-$xcode-red: #A81930;
-$xcode-grey: #DBDBDB;
-$xcode-swift: #A82200;
-$xcode-purple: #543C94;
-$window-close: #FF4F4E;
-$window-minimize: #FFBD2D;
-$window-maximize: #27CA41;
+$xcode-green-light: #00b900;
+$xcode-blue-marina: #0c5d65;
+$xcode-blue-marina-light: #01bbcd;
+$xcode-red: #a81930;
+$xcode-grey: #dbdbdb;
+$xcode-swift: #a82200;
+$xcode-purple: #543c94;
+$xcode-purple-light: #6f50c9;
+$window-close: #ff4f4e;
+$window-minimize: #ffbd2d;
+$window-maximize: #27ca41;
+
+@mixin color-xcode-blue-marina() {
+  @media (prefers-color-scheme: dark) {
+    color: $xcode-blue-marina-light;
+  }
+  @media (prefers-color-scheme: light) {
+    color: $xcode-blue-marina;
+  }
+}
+
+@mixin color-xcode-green() {
+  @media (prefers-color-scheme: dark) {
+    color: $xcode-green-light;
+  }
+  @media (prefers-color-scheme: light) {
+    color: $xcode-green;
+  }
+}
+
+@mixin color-xcode-purple() {
+  @media (prefers-color-scheme: dark) {
+    color: $xcode-purple-light;
+  }
+  @media (prefers-color-scheme: light) {
+    color: $xcode-purple;
+  }
+}

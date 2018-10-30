@@ -5,11 +5,10 @@
   justify-content: center;
 }
 
-
 .open__box {
   padding-top: $spacing-unit/2;
   padding-bottom: $spacing-unit/2;
-  width: calc(#{$content-width}/2 - #{$spacing-unit*4});
+  width: calc(#{$content-width}/ 2 - #{$spacing-unit * 4});
   display: flex;
   text-align: center;
   justify-content: flex-start;
@@ -19,15 +18,23 @@
   padding-right: $spacing-unit/2;
   font-size: $small-font-size;
   border: 1px;
-  border-color: $xcode-purple;
+  @media (prefers-color-scheme: dark) {
+    border-color: $xcode-purple-light;
+    -webkit-box-shadow: 5px 5px 0px 3px $xcode-purple-light;
+    -moz-box-shadow: 5px 5px 0px 3px $xcode-purple-light;
+    box-shadow: 5px 5px 0px 3px $xcode-purple-light;
+  }
+  @media (prefers-color-scheme: light) {
+    border-color: $xcode-purple;
+    -webkit-box-shadow: 5px 5px 0px 3px $xcode-purple;
+    -moz-box-shadow: 5px 5px 0px 3px $xcode-purple;
+    box-shadow: 5px 5px 0px 3px $xcode-purple;
+  }
   border-width: 1px;
   border-style: solid;
   border-radius: 5px;
-  -webkit-box-shadow: 5px 5px 0px 3px $xcode-purple;
-  -moz-box-shadow: 5px 5px 0px 3px $xcode-purple;
-  box-shadow: 5px 5px 0px 3px $xcode-purple;
 }
 
 .open__box-license {
-  color: $xcode-purple;
+  @include color-xcode-purple;
 }

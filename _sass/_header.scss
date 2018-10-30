@@ -18,7 +18,7 @@
 .header__credits-wrapper {
   align-self: flex-end;
   text-align: end;
-  width: $spacing-unit*9;
+  width: $spacing-unit * 9;
   margin-right: $spacing-unit;
   font-size: $small-font-size;
 
@@ -30,22 +30,22 @@
 }
 
 .header__title {
-  color: $xcode-blue-marina;
+  @include color-xcode-blue-marina;
   @include bold-font;
   @include relative-font-size(2.4);
 
   &:hover {
-    color: $xcode-blue-marina;
+    @include color-xcode-blue-marina;
   }
   &:visited {
-    color: $xcode-blue-marina;
+    @include color-xcode-blue-marina;
   }
 }
 
 .header__slogan {
   @include relative-font-size(1.2);
+  @include color-xcode-blue-marina;
   margin-bottom: $spacing-unit;
-  color: $xcode-blue-marina;
 }
 
 .header__slogan-black {
@@ -63,29 +63,29 @@
 .header__links-link {
   color: $text-color;
   text-decoration: none;
-  
+
   &:visited {
     color: $text-color;
   }
-  
+
   &:hover {
-    color: $xcode-blue-marina;
+    @include color-xcode-blue-marina;
     text-decoration: underline;
-  } 
+  }
 }
 
 .header__links-link-enabled {
-  color: $xcode-blue-marina;
+  @include color-xcode-blue-marina;
   text-decoration: none;
-  
+
   &:visited {
-    color: $xcode-blue-marina;
+    @include color-xcode-blue-marina;
   }
-  
+
   &:hover {
-    color: $xcode-blue-marina;
+    @include color-xcode-blue-marina;
     text-decoration: underline;
-  } 
+  }
 }
 
 .site-title {

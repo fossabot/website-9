@@ -16,7 +16,7 @@
 }
 
 .home__what-highlight {
-  color: $xcode-blue-marina;
+  @include color-xcode-blue-marina;
 }
 
 .home__what-swift {
@@ -25,7 +25,7 @@
 
 .home__back-to-top {
   text-align: center;
-  margin-top: $spacing-unit*2;
+  margin-top: $spacing-unit * 2;
 }
 
 .home__window {
@@ -66,7 +66,7 @@
   color: darken($xcode-grey, 30%);
 
   &:hover {
-    color: $xcode-blue-marina;
+    @include color-xcode-blue-marina;
   }
 }
 
@@ -92,7 +92,7 @@
 }
 
 .home__command-not-available {
-  color: $xcode-blue-marina;
+  @include color-xcode-blue-marina;
 }
 
 .home__why--when {
@@ -110,7 +110,7 @@
   @include floating;
   padding-top: $spacing-unit/2;
   padding-bottom: $spacing-unit/2;
-  width: calc(#{$content-width}/2 - #{$spacing-unit*4});
+  width: calc(#{$content-width}/ 2 - #{$spacing-unit * 4});
   display: flex;
   text-align: center;
   justify-content: flex-start;
@@ -120,20 +120,29 @@
   padding-right: $spacing-unit/2;
   font-size: $small-font-size;
   border: 1px;
-  border-color: $xcode-purple;
   border-width: 1px;
   border-style: solid;
   border-radius: 5px;
-  -webkit-box-shadow: 5px 5px 0px 3px $xcode-purple;
-  -moz-box-shadow: 5px 5px 0px 3px $xcode-purple;
-  box-shadow: 5px 5px 0px 3px $xcode-purple;
+
+  @media (prefers-color-scheme: dark) {
+    border-color: $xcode-purple-light;
+    -webkit-box-shadow: 5px 5px 0px 3px $xcode-purple-light;
+    -moz-box-shadow: 5px 5px 0px 3px $xcode-purple-light;
+    box-shadow: 5px 5px 0px 3px $xcode-purple-light;
+  }
+  @media (prefers-color-scheme: light) {
+    border-color: $xcode-purple;
+    -webkit-box-shadow: 5px 5px 0px 3px $xcode-purple;
+    -moz-box-shadow: 5px 5px 0px 3px $xcode-purple;
+    box-shadow: 5px 5px 0px 3px $xcode-purple;
+  }
 }
 
 .home__box-title {
+  @include relative-font-size(1.25);
+  @include color-xcode-purple;
   font-family: $bold-font-family;
-  @include relative-font-size(1.250);
   flex: 0;
-  color: $xcode-purple;
 }
 
 .home__box-excerpt {
@@ -154,7 +163,7 @@
 }
 
 .home_before-after--box {
-  width: calc(#{$content-width}/2 - #{$spacing-unit*2});
+  width: calc(#{$content-width}/ 2 - #{$spacing-unit * 2});
   flex-grow: 0;
   display: flex;
   text-align: center;
@@ -164,13 +173,12 @@
 
 .home__before-after--title {
   @include bold-font;
-  color: $xcode-purple;
+  @include color-xcode-purple;
 }
 
 .home__before-after--image {
-  width: calc(#{$content-width}/2 - #{$spacing-unit*4});
+  width: calc(#{$content-width}/ 2 - #{$spacing-unit * 4});
 }
-
 
 .home__contributors {
   display: flex;

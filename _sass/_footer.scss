@@ -1,5 +1,5 @@
 .footer {
-  background: $xcode-blue-marina;
+  @include color-xcode-blue-marina;
   text-align: center;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -10,15 +10,15 @@
 .footer__link {
   color: white;
   text-decoration: none;
-  
+
   &:visited {
     color: white;
   }
-  
+
   &:hover {
     color: white;
     text-decoration: underline;
-  } 
+  }
 }
 
 .footer_message {

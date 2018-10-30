@@ -19,10 +19,11 @@
 }
 
 .posts__post-title--case {
-  color: $xcode-blue-marina;
+  @include color-xcode-blue-marina;
 }
 
-.posts__post-excerpt {}
+.posts__post-excerpt {
+}
 
 .posts__post-title--text {
   color: $xcode-red;
@@ -30,9 +31,9 @@
   &:visited {
     color: $xcode-red;
   }
-  
+
   &:hover {
     color: $xcode-red;
     text-decoration: underline;
-  } 
+  }
 }
